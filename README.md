@@ -1,13 +1,40 @@
-# SAMPLE UTILIZATION OF TERRAFORM
+# 📦 Sample Utilization of Terraform
 
-# Prerequisite
+## ✅ Prerequisites
 
-Your local machine should have the following:
+Ensure your local machine has the following installed:
 
-1. Terraform
-2. AWS CLI
+1. **Terraform**
+2. **AWS CLI**
 
-# Creation
+---
 
-1. configure the `main.tf` file
-2. run `terraform init`
+## ⚙️ Creation Steps
+
+### 1. Configure the `main.tf` file
+
+If you want to pick an **Amazon Linux 2 AMI**, you can run the following command:
+
+```bash
+aws ec2 describe-images \
+  --owners amazon \
+  --filters "Name=name,Values=amzn2-ami-hvm-*-x86_64-gp2" \
+  --query "Images[*].[ImageId,Name]" \
+  --output text
+```
+
+### 2. Initialize Terraform
+
+```bash
+terraform init
+```
+
+---
+
+## ☁️ Apply the Configuration to AWS
+
+Run the following command to apply the configuration to your cloud provider:
+
+```bash
+terraform apply
+```
