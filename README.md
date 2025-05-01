@@ -33,8 +33,10 @@ terraform init
 
 ## ☁️ Apply the Configuration to AWS
 
-Run the following command to apply the configuration to your cloud provider:
+1. Run the following command to apply the configuration to your cloud provider:
 
 ```bash
 terraform apply
 ```
+
+2. You'll notice thet the **terrafrom.tfstate** file is created/updated.
