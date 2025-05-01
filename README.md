@@ -48,3 +48,20 @@ terraform apply
 ```bash
 terraform destroy
 ```
+
+## Getting the output
+
+1. You can specify the variables that you want to `output` through the **output.tf** file.
+2. After configuring the **output.tf** file, you have to apply the changes using:
+
+```bash
+terraform apply
+```
+
+and you'll see the output right there.
+
+3. If you want to see the output without having to run the `terraform apply` again, you can simply run:
+
+```bash
+terraform output
+```

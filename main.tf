@@ -6,9 +6,9 @@ provider "aws" {
 # Declare an EC2 Instance
 resource "aws_instance" "app_server" {
   ami           = "ami-01f5a0b78d6089704" # Amazon Linux 2 AMI
-  instance_type = "t2.micro"
+  instance_type = var.ec2_instance_type
 
   tags = {
-    Name = "My Terraform Instance Name"
+    Name = var.instance_name
   }
 }
