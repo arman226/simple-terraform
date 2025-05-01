@@ -40,3 +40,11 @@ terraform apply
 ```
 
 2. You'll notice thet the **terrafrom.tfstate** file is created/updated.
+
+## ☁️ Terminate Instance
+
+1. Run the following command to terminate an instance:
+
+```bash
+terraform destroy
+```
